@@ -27,23 +27,6 @@ server:
     minAvailable: "1"
   service:
     type: "ClusterIP"
-  ingress:
-    enabled: true
-    https: false
-    annotations:
-      alb.ingress.kubernetes.io/scheme: "internet-facing"
-      alb.ingress.kubernetes.io/target-type: "ip"
-      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
-      alb.ingress.kubernetes.io/healthcheck-path: /healthz
-      alb.ingress.kubernetes.io/tags: "Environment=hub,GitOps=true"
-      # alb.ingress.kubernetes.io/security-groups: { { SECURITY_GROUP_ID } }
-      alb.ingress.kubernetes.io/manage-backend-security-group-rules: "true"
-    ingressClassName: "alb"
-    hosts:
-      - argocd.dev.hulkong.shop
-    tls:
-      - hosts:
-          - "*.dev.hulkong.shop"
 
 repoServer:
   replicas: 2
