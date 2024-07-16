@@ -37,7 +37,7 @@ server:
       alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
       alb.ingress.kubernetes.io/tags: "Environment=hub,GitOps=true"
       alb.ingress.kubernetes.io/ssl-redirect: "443"
-      alb.ingress.kubernetes.io/security-groups: { { SECURITY_GROUP_ID } }
+      # alb.ingress.kubernetes.io/security-groups: { { SECURITY_GROUP_ID } }
       alb.ingress.kubernetes.io/manage-backend-security-group-rules: "true"
     ingressClassName: "alb"
     hosts:
