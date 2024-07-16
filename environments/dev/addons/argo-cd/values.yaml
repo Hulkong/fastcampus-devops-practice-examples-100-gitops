@@ -29,7 +29,7 @@ server:
     type: "ClusterIP"
   ingress:
     enabled: true
-    https: true
+    https: false
     annotations:
       alb.ingress.kubernetes.io/scheme: "internet-facing"
       alb.ingress.kubernetes.io/target-type: "ip"
