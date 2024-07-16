@@ -6,6 +6,8 @@ controller:
     minAvailable: "1"
 
 server:
+  extraArgs:
+    - --insecure
   replicas: 2
   autoscaling:
     enabled: true
